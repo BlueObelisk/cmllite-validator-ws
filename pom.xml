@@ -13,6 +13,7 @@
     <groupId>cml.cmlvalidator</groupId>
     <artifactId>cmlvalidator-site</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <repositories>
         <repository>
@@ -20,6 +21,21 @@
             <url>https://maven.ch.cam.ac.uk/m2repo</url>
         </repository>
     </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>maven-jetty-plugin</artifactId>
+                <version>6.1.21</version>
+                <configuration>
+                    <contextPath>/</contextPath>
+                    <scanIntervalSeconds>5</scanIntervalSeconds>
+                    <tmpDirectory>${basedir}/target/jettytmp</tmpDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <properties>
         <restlet.version>2.0.1</restlet.version>
@@ -36,6 +52,18 @@
             <artifactId>org.restlet.ext.freemarker</artifactId>
             <version>${restlet.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.restlet.jee</groupId>
+            <artifactId>org.restlet.ext.servlet</artifactId>
+            <version>${restlet.version}</version>
+        </dependency>
+          <dependency>
+            <groupId>cml</groupId>
+           <artifactId>cml-validator</artifactId>
+            <version>0.0.2-SNAPSHOT</version>
+        </dependency>
     </dependencies>
+
+
 
 </project>

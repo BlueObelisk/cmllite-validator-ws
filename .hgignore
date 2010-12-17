@@ -7,3 +7,5 @@
 \.iml$
 \.ipr$
 \.iws$
+glob:example.log
+glob:putting up the ws
