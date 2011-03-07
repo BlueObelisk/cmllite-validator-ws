@@ -6,13 +6,14 @@ import nu.xom.xslt.XSLTransform;
 import org.apache.log4j.Logger;
 import org.restlet.data.Form;
 import org.restlet.data.MediaType;
-import org.restlet.data.Status;
 import org.restlet.representation.Representation;
 import org.restlet.representation.StringRepresentation;
 import org.restlet.resource.Post;
 import org.restlet.resource.ServerResource;
 import org.xmlcml.www.CmlLiteValidator;
 import org.xmlcml.www.ValidationReport;
+import org.xmlcml.www.ValidationResult;
+import org.xmlcml.www.XmlWellFormednessValidator;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -37,12 +38,19 @@ public class ValidateResource extends ServerResource {
 
     @Post("form:html")
     public Representation postForm(Form form) throws IOException {
+        System.out.println("form content");
         String cml = form.getFirstValue("cml");
+        ValidationReport report = null;
         if (cml == null) {
-            setStatus(Status.CLIENT_ERROR_BAD_REQUEST);
-            return null;
+            report = new ValidationReport(XmlWellFormednessValidator.reportTitle);
+            report.setValidationResult(ValidationResult.INVALID);
+            report.addError("the xml is empty");
+
+//            setStatus(Status.CLIENT_ERROR_BAD_REQUEST);
+//            return null;
+        } else {
+            report = validator.validate(cml);
         }
-        ValidationReport report = validator.validate(cml);
 
         Map<String, Object> model = new HashMap<String, Object>();
 
@@ -58,8 +66,11 @@ public class ValidateResource extends ServerResource {
 
     @Post("cml|xml:xml")
     public Representation postCml(String cml) {
+        System.out.println("CML");
         ValidationReport report = validator.validate(cml);
-        return new StringRepresentation(report.getReport().toXML(), MediaType.TEXT_HTML);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        print(report.getReport(), baos);
+        return new StringRepresentation(baos.toString(), MediaType.APPLICATION_XML);
     }
 
     private Document getReportAsHtml(ValidationReport report) {
