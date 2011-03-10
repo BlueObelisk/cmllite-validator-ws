@@ -57,13 +57,12 @@
             <artifactId>org.restlet.ext.servlet</artifactId>
             <version>${restlet.version}</version>
         </dependency>
-          <dependency>
+        <dependency>
             <groupId>cml</groupId>
-           <artifactId>cml-validator</artifactId>
+            <artifactId>cml-validator</artifactId>
             <version>0.0.3-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
 
 
 </project>
