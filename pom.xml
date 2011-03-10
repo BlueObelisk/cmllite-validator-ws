@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>wwmm</groupId>
+        <groupId>uk.ac.cam.ch.wwmm</groupId>
         <artifactId>wwmm-parent</artifactId>
-        <version>1</version>
+        <version>3-SNAPSHOT</version>
     </parent>
 
     <groupId>cml.cmlvalidator</groupId>
@@ -18,7 +18,7 @@
     <repositories>
         <repository>
             <id>ucc-repo</id>
-            <url>https://maven.ch.cam.ac.uk/m2repo</url>
+            <url>http://maven.ch.cam.ac.uk/m2repo</url>
         </repository>
     </repositories>
 
@@ -60,7 +60,7 @@
           <dependency>
             <groupId>cml</groupId>
            <artifactId>cml-validator</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
+            <version>0.0.3-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
