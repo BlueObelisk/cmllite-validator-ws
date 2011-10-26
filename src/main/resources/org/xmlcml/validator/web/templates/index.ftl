@@ -11,8 +11,9 @@
     <meta content="index,follow,noodp,noydir" name="robots"/>
     <link rel="stylesheet" type="text/css"
           href="http://yui.yahooapis.com/2.8.1/build/reset-fonts-grids/reset-fonts-grids.css"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="http://xml-cml.org/css/superfish.css"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="http://xml-cml.org/css/cml.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://xml-cml.org/style/superfish.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://xml-cml.org/style/cml.css"/>
+    <link rel="shortcut icon" href="http://xml-cml.org/images/favicon.ico" type="image/x-icon" />
     <script type="text/javascript" src="http://xml-cml.org/js/jquery-1.2.6.min.js"></script>
     <script type="text/javascript" src="http://xml-cml.org/js/hoverIntent.js"></script>
     <script type="text/javascript" src="http://xml-cml.org/js/superfish.js"></script>
@@ -37,109 +38,17 @@
     </script>
     <title>Chemical Markup Language | Validator</title>
 </head>
-
 <body>
 <div class="page clear" id="wrapper">
     <div id="header">
-        <img alt="Chemical Markup Language" src="http://xml-cml.org/images/title.png"/>
-
-        <div id="navigation" class="clear">
-            <div id="menu">
-                <ul class="sf-menu">
-                    <li><a href="http://xml-cml.org//index.php">Home</a></li>
-                    <li><a href="http://xml-cml.org//tutorial/index.php" class="sf-with-ul">Tutorial<span class="sf-sub-indicator">»</span></a>
-                        <ul>
-                            <li><a href="http://xml-cml.org//schema/cmllite.php#conventions" class="sf-with-ul">Conventions<span
-                                    class="sf-sub-indicator">»</span></a>
-                                <ul>
-                                    <li><a href="http://xml-cml.org//convention/molecular/index.php">Molecular</a></li>
-                                    <li><a href="http://xml-cml.org//convention/dictionary">Dictionary</a></li>
-                                    <li><a href="http://xml-cml.org//convention/cmlcomp/index.php">CmlComp</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="http://xml-cml.org//examples/index.php" class="sf-with-ul">Examples<span class="sf-sub-indicator">»</span></a>
-                                <ul>
-                                    <li><a href="http://xml-cml.org//examples/schema3/index.php">Schema 3<span
-                                            class="sf-sub-indicator">»</span></a>
-                                        <ul>
-                                            <li><a href="http://xml-cml.org//examples/schema3/molecular/index.php">Molecular</a></li>
-                                            <li><a href="http://xml-cml.org//examples/schema3/cmlcomp/index.php">CmlComp</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="http://xml-cml.org//examples/schema24/index.php">Schema 2.4</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="http://validator.xml-cml.org">Validator</a></li>
-                    <li><a href="http://xml-cml.org//schema/index.php" class="sf-with-ul">Specifications<span
-                            class="sf-sub-indicator">»</span></a>
-                        <ul>
-                            <li><a href="http://xml-cml.org//schema/cmllite.php">CMLLite</a></li>
-                            <li><a href="http://xml-cml.org//schema/schema3/index.php" class="sf-with-ul">Schema 3<span
-                                    class="sf-sub-indicator">»</span></a>
-                                <ul>
-                                    <li><a href="http://xml-cml.org//schema/schema3/index.php">View</a></li>
-                                    <li><a href="http://xml-cml.org//schema/schema3/schema.xsd">Download</a></li>
-                                    <li><a href="http://xml-cml.org//examples/schema3/index.php">Examples</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="http://xml-cml.org//schema/schema24/index.php" class="sf-with-ul">Schema 2.4<span
-                                    class="sf-sub-indicator">»</span></a>
-                                <ul>
-                                    <li><a href="http://xml-cml.org//schema/schema24/index.php">View 2.4</a></li>
-                                    <li><a href="http://xml-cml.org//schema/schema24/schema.xsd">Download 2.4</a></li>
-                                    <li><a href="http://xml-cml.org//examples/schema24/index.php">Examples</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="http://www.xml-cml.org/spec/dictionaries">Dictionaries</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="sf-with-ul">Conventions<span class="sf-sub-indicator">»</span></a>
-                        <ul>
-                            <li>
-                                <a href="http://www.xml-cml.org/convention/dictionary">Dictionary</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="http://xml-cml.org//dictionary/index.php" class="sf-with-ul">Dictionaries<span
-                            class="sf-sub-indicator">»</span></a>
-                        <ul>
-                            <li><a href="http://xml-cml.org//dictionary/cml/index.php">CML</a></li>
-                            <li><a href="http://xml-cml.org//dictionary/dummy/index.php">Dummy</a></li>
-                        </ul>
-                    </li>
-                    <li class="last"><a href="/tools/index.php" class="sf-with-ul">
-                        Tools &amp; Links<span class="sf-sub-indicator">»</span></a>
-                        <ul>
-                            <li><a href="http://validator.xml-cml.org">Validator</a></li>
-                            <li><a href="http://xml-cml.org//tools/index.php#jumbo">JUMBO</a></li>
-                            <li><a href="http://xml-cml.org//tools/index.php#chem4word">Chem4Word</a></li>
-                            <li><a href="http://www-pmr.ch.cam.ac.uk/wiki/Publications">Bibliography</a></li>
-                            <li><a href="/blog/" class="sf-with-ul">Blogs<span class="sf-sub-indicator">»</span></a>
-                                <ul>
-                                    <li><a href="http://xml-cml.org//blog/">The CML Blog</a></li>
-                                    <li><a href="http://www.ch.ic.ac.uk/rzepa/blog/">Henry Rzepa</a></li>
-                                    <li><a href="http://wwmm.ch.cam.ac.uk/blogs/murrayrust/">Peter M-R</a></li>
-                                    <li><a href="http://jat45.wordpress.com">Joe Townsend</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="http://wikipedia.org/wiki/Chemical_Markup_Language">Wikipedia Entry</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="clear">
-                </div>
-            </div>
-        </div>
+        <a href="http://xml-cml.org/index.php">
+            <img alt="Chemical Markup Language" src="http://xml-cml.org/images/title.png" />
+        </a>
         <div class="clear" id="breadcrumbs">
             <ul>
                 <li><a href="http://xml-cml.org/index.php">CML</a></li>
                 <li><a href="http://validator.xml-cml.org/">Validator</a></li>
-                <li>Validator</li>
+                <li>Input</li>
             </ul>
         </div>
     </div>
@@ -154,10 +63,14 @@
             <li>all the prefixes used in <code>dictRef</code>s have been bound</li>
             <li>all the <code>dictRef</code> values are URLs</li>
         </ol>
+        <p>
+            The validator will also give warnings if deprecated constructs are used (e.g. <code>orders</code> should
+            not use numeric values).
+        </p>
         <div class="center">
             <form action="/validate" method="post">
                 <label for="fragment" title="Paste a complete XML/CML document here">Enter the CML to validate</label>
-                <textarea id="fragment" rows="12" cols="100" name="cml"></textarea>
+                <textarea id="fragment" rows="16" cols="100" name="cml"></textarea>
                 <input type="submit" value="Submit Query"/>
             </form>
         </div>
