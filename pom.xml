@@ -10,7 +10,7 @@
         <version>3-SNAPSHOT</version>
     </parent>
 
-    <groupId>cml.cmlvalidator</groupId>
+    <groupId>org.xml-cml.validator</groupId>
     <artifactId>cmlvalidator-site</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
@@ -63,7 +63,7 @@
             <version>${restlet.version}</version>
         </dependency>
         <dependency>
-            <groupId>cml</groupId>
+            <groupId>org.xml-cml.validator</groupId>
             <artifactId>cml-validator</artifactId>
             <version>0.0.3-SNAPSHOT</version>
         </dependency>
